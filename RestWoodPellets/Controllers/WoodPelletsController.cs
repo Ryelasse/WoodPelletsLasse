@@ -18,7 +18,6 @@ namespace RestWoodPellets.Controllers
 
 
         [HttpGet]
-        //forventede statuskoder 200 OK 204 No Content
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public IActionResult Get()
@@ -49,7 +48,7 @@ namespace RestWoodPellets.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] string value)
         {
-            return Ok(value);
+            return Ok(value); 
         }
 
         [HttpPost]
@@ -59,11 +58,6 @@ namespace RestWoodPellets.Controllers
         }
 
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            return NoContent();
-        }
-
+        
     }
 }
