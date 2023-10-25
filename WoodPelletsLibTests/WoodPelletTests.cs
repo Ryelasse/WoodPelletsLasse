@@ -18,7 +18,7 @@ namespace WoodPelletsLib.Tests
             WoodPellet woodpellet = new WoodPellet();
 
             //Act
-            woodpellet.Brand = "BrandOK";
+            woodpellet.Brand = "OK";
 
             //Assert
             Assert.IsTrue(woodpellet.Brand.Length >= 2);
@@ -38,13 +38,23 @@ namespace WoodPelletsLib.Tests
 
 
         [TestMethod()]
-        public void QualityTestOK()         //tester Quality hvor kravet om en range på 1 til 5 opfyldes
+        public void QualityTestOK1()         //tester Quality på den nedre grænse
         {
             WoodPellet woodpellet = new WoodPellet();
 
-            woodpellet.Quality = 3;
+            woodpellet.Quality = 1;
 
             Assert.IsTrue(woodpellet.Quality >= 1 &&  woodpellet.Quality <= 5);
+        }
+
+        [TestMethod()]
+        public void QualityTestOK5()         //tester Quality på den øvre grænse
+        {
+            WoodPellet woodpellet = new WoodPellet();
+
+            woodpellet.Quality = 5;
+
+            Assert.IsTrue(woodpellet.Quality >= 1 && woodpellet.Quality <= 5);
         }
 
         [TestMethod()]
